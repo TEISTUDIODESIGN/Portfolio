@@ -396,33 +396,20 @@
 }
 
 @media (max-width: 680px) {
-  html, body {
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
- 
-  .page-shell, .site-nav, .page-hero, .page-content, .site-footer, .services-grid {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important; 
-    box-sizing: border-box;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
- 
-  .featured-grid, .portfolio-grid, .services-grid, .testimonials-grid {
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-  }
-
-
-  .project-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
+  .site-nav { padding: 1rem 1.5rem; }
+  .site-nav__links { display: none; }
+  .site-hero { padding: 2.5rem 1.5rem; }
+  .section { padding: var(--space-5) 1.5rem; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .page-hero { padding: 6.5rem 1.5rem var(--space-3); }
+  .page-content { padding: var(--space-4) 1.5rem; }
+  .site-footer { padding: var(--space-3) 1.5rem; flex-direction: column; align-items: flex-start; }
+  .site-footer__links { gap: var(--space-3); }
+  .editor-field__row { grid-template-columns: 1fr; }
+  .project-card img{width: 100%;
+    height: 300px; 
+    object-fit: cover;}
 }
