@@ -410,21 +410,17 @@
   .section { padding: var(--space-5) 1.5rem;}
   .section--alt {
     width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 0 !important;  /* 去掉背景框的左右内边距 */
-    padding-right: 0 !important;
-    box-sizing: border-box;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box; 
   }
   .section--alt > div {
-    padding-left: 1.5rem !important;  /* 给内部内容加上边距 */
-    padding-right: 1.5rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
   }
   .featured-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
-  .services-grid { display: grid !important;
-    grid-template-columns: 1fr !important; /* 强制单列 */
-    gap: 1.5rem !important;
-  }
+  .services-grid { grid-template-columns: 1fr !important;}
   .testimonials-grid { grid-template-columns: 1fr; }
   .page-hero { padding: 6.5rem 1.5rem var(--space-3); }
   .page-content { padding: var(--space-4) 1.5rem; }
