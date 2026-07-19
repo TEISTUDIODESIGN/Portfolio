@@ -408,9 +408,25 @@
   .site-nav__links { display: none; }
   .site-hero { padding: 2.5rem 1.5rem; }
   .section { padding: var(--space-5) 1.5rem;}
+  .section--alt {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box;
+  }
   .featured-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
-  .services-grid { grid-template-columns: 1fr !important; }
+  .services-grid { display: grid !important;
+    grid-template-columns: 1fr !important; /* 强制单列，即自动换行 */
+    gap: 1.5rem !important;
+    width: 100% !important;
+    min-width: 0 !important; /* 关键：防止元素撑开容器 */ }
+    .services-grid > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    border-top: 1px solid var(--line) !important;
+  }
   .testimonials-grid { grid-template-columns: 1fr; }
   .page-hero { padding: 6.5rem 1.5rem var(--space-3); }
   .page-content { padding: var(--space-4) 1.5rem; }
