@@ -396,6 +396,13 @@
 }
 
 @media (max-width: 680px) {
+  div[style*="grid-template-columns:repeat(3, 1fr)"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* 强制变为单列 */
+    max-width: 100% !important;           /* 强制铺满全屏 */
+    margin: 0 !important;
+    padding: 0 1.5rem !important;        /* 保持左右边距 */
+  }
   .site-nav { padding: 1rem 1.5rem; }
   .site-nav__links { display: none; }
   .site-hero { padding: 2.5rem 1.5rem; }
