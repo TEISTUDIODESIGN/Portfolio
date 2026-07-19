@@ -327,6 +327,13 @@
   padding: var(--space-4); border: 1px solid var(--line);
   transition: border-color 0.2s ease;
 }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .service-card:hover { border-color: var(--accent); }
 .service-card__number {
   font-size: 0.65rem; letter-spacing: 0.14em;
@@ -396,33 +403,14 @@
 }
 
 @media (max-width: 680px) {
-  div[style*="grid-template-columns:repeat(3, 1fr)"] {
-    display: grid !important;
-    grid-template-columns: 1fr !important; /* 强制变为单列 */
-    max-width: 100% !important;           /* 强制铺满全屏 */
-    margin: 0 !important;
-    padding: 0 1.5rem !important;        /* 保持左右边距 */
-  }
+  
   .site-nav { padding: 1rem 1.5rem; }
   .site-nav__links { display: none; }
   .site-hero { padding: 2.5rem 1.5rem; }
   .section { padding: var(--space-5) 1.5rem;}
-  .section-alt { 
-    max-width: 100% !important; /* 关键点：取消原本的宽度限制 */
-    width: 100% !important;     /* 关键点：铺满屏幕 */
-    margin: 0 !important;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-    box-sizing: border-box;     /* 防止 padding 把容器撑坏 */
-  }
-  .section-alt [style*="grid"] {
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
   .featured-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr !important; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .page-hero { padding: 6.5rem 1.5rem var(--space-3); }
   .page-content { padding: var(--space-4) 1.5rem; }
